@@ -42,7 +42,7 @@
     }];
     NSLog(@"sum = %@",sum);
     
-    NSLog(@"----Flod-----");
+    NSLog(@"----FlodStr-----");
     NSString *floderStr = [[arr rx_mapWithBlock:^id(id each) {
         return [each stringValue];
     }] rx_foldInitialValue:@"" block:^id(id memo, id each) {
