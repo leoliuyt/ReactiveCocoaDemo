@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-FunctionalReactivePixels-500px-iOS-api.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FunctionalReactivePixels-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FunctionalReactivePixels-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FunctionalReactivePixels-libextobjc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FunctionalReactivePixels.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>012A59C8515A0C0260710CB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>11DAD243951626382795CD37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1279AD4D941821F80263B6B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2224D5CAFEB9992292CFE014</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2FF2DF8C26114F1B14D44AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
