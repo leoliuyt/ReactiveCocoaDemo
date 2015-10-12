@@ -28,7 +28,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="juf-R3-joR"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -43,19 +43,19 @@
                                             <segue destination="Clt-ox-qcp" kind="push" id="twg-tR-J3j"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OaF-za-V6X">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="OaF-za-V6X">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OaF-za-V6X" id="aNt-r9-boE">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSingal简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-WM-hwC">
-                                                    <rect key="frame" x="30" y="0.0" width="240" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSubject和RACReplaySubject简单使用:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-WM-hwC">
+                                                    <rect key="frame" x="30" y="0.0" width="290" height="43.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="NXO-Pu-xOo"/>
+                                                        <constraint firstAttribute="width" constant="290" id="NXO-Pu-xOo"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -66,20 +66,23 @@
                                                 <constraint firstItem="KdK-WM-hwC" firstAttribute="top" secondItem="aNt-r9-boE" secondAttribute="topMargin" constant="-8" id="wLU-RW-Wzk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Clt-ox-qcp" kind="push" id="ZfX-cR-6es"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bRr-eR-sDy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="bRr-eR-sDy">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRr-eR-sDy" id="X79-fD-Zjt">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSingal简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-si-xRK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSequence和RACTuple简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-si-xRK">
                                                     <rect key="frame" x="30" y="0.0" width="240" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="2L3-wR-0q9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -90,6 +93,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZWh-si-xRK" secondAttribute="bottom" constant="-8" id="sMV-hf-dnI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Clt-ox-qcp" kind="push" id="fgk-Fe-KZb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mIM-Cn-3jo">
                                         <rect key="frame" x="0.0" y="196" width="320" height="44"/>
@@ -98,12 +104,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSingal简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iO-ey-ta1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACCommand简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iO-ey-ta1">
                                                     <rect key="frame" x="30" y="0.0" width="240" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="cao-JY-522"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -115,11 +121,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XBd-Pn-tE3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="XBd-Pn-tE3">
                                         <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XBd-Pn-tE3" id="kc8-pe-Z19">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACSingal简单使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-Qz-ULw">
@@ -127,7 +133,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="2Y9-zT-MdK"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -138,6 +144,9 @@
                                                 <constraint firstItem="9Tr-Qz-ULw" firstAttribute="leading" secondItem="kc8-pe-Z19" secondAttribute="leadingMargin" constant="22" id="jKz-kl-ehd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Clt-ox-qcp" kind="push" id="GFp-fq-qYN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hUf-kj-QLY">
                                         <rect key="frame" x="0.0" y="284" width="320" height="44"/>
@@ -201,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="245" y="225"/>
         </scene>
-        <!--View Controller-->
+        <!--Signal Simple Use View Controller-->
         <scene sceneID="1Ok-9P-Vh4">
             <objects>
-                <viewController id="Clt-ox-qcp" sceneMemberID="viewController">
+                <viewController id="Clt-ox-qcp" customClass="RACSignalSimpleUseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5uC-Hu-hQY"/>
                         <viewControllerLayoutGuide type="bottom" id="NYH-m9-sQv"/>
@@ -212,13 +221,113 @@
                     <view key="view" contentMode="scaleToFill" id="LAw-s5-idB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-9u-C9Y">
+                                <rect key="frame" x="85" y="98" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GYB-Hi-e2p"/>
+                                    <constraint firstAttribute="height" constant="30" id="iEy-SG-aHF"/>
+                                </constraints>
+                                <state key="normal" title="RACSignal简单使用"/>
+                                <connections>
+                                    <action selector="signalUseAction:" destination="Clt-ox-qcp" eventType="touchUpInside" id="H3h-pB-6MS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhS-j2-MuN">
+                                <rect key="frame" x="0.0" y="154" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ed1-m8-6zq"/>
+                                    <constraint firstAttribute="width" constant="320" id="MhC-aL-R2q"/>
+                                </constraints>
+                                <state key="normal" title="RACSubject和RACReplaySubject简单使用"/>
+                                <connections>
+                                    <action selector="subjectAction:" destination="Clt-ox-qcp" eventType="touchUpInside" id="yGQ-5O-1vW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chI-mr-OAf">
+                                <rect key="frame" x="0.0" y="192" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="lcN-Dd-ZOW"/>
+                                    <constraint firstAttribute="height" constant="30" id="w0o-J6-k4q"/>
+                                </constraints>
+                                <state key="normal" title="RACSubject当做Delegate的用法"/>
+                                <connections>
+                                    <segue destination="fGe-Pf-RG6" kind="modal" identifier="SecondVC" id="E40-w1-Vkx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3F-nX-Ab4">
+                                <rect key="frame" x="0.0" y="242" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Bv8-Fd-ueW"/>
+                                    <constraint firstAttribute="height" constant="30" id="Vp0-9q-6ie"/>
+                                </constraints>
+                                <state key="normal" title="RACSequence和RACTuple简单使用"/>
+                                <connections>
+                                    <action selector="segueneAndTupleAction:" destination="Clt-ox-qcp" eventType="touchUpInside" id="jOg-sj-cz0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-mM-VqO">
+                                <rect key="frame" x="0.0" y="292" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UTe-Mq-yxz"/>
+                                    <constraint firstAttribute="width" constant="320" id="pBa-bX-Pxe"/>
+                                </constraints>
+                                <state key="normal" title="RACCommand简单使用"/>
+                                <connections>
+                                    <action selector="commandAction:" destination="Clt-ox-qcp" eventType="touchUpInside" id="F60-vM-BSF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AdJ-mM-VqO" firstAttribute="centerX" secondItem="LAw-s5-idB" secondAttribute="centerX" id="Ba7-6z-Aq1"/>
+                            <constraint firstItem="zZg-9u-C9Y" firstAttribute="top" secondItem="5uC-Hu-hQY" secondAttribute="bottom" constant="34" id="Bp9-qP-ZZM"/>
+                            <constraint firstItem="bhS-j2-MuN" firstAttribute="top" secondItem="zZg-9u-C9Y" secondAttribute="bottom" constant="26" id="CG7-0w-QOk"/>
+                            <constraint firstItem="chI-mr-OAf" firstAttribute="top" secondItem="bhS-j2-MuN" secondAttribute="bottom" constant="8" id="IAR-I6-XiN"/>
+                            <constraint firstItem="f3F-nX-Ab4" firstAttribute="centerX" secondItem="LAw-s5-idB" secondAttribute="centerX" id="Rko-Qx-Jfc"/>
+                            <constraint firstItem="AdJ-mM-VqO" firstAttribute="top" secondItem="f3F-nX-Ab4" secondAttribute="bottom" constant="20" id="UxM-Ol-pxs"/>
+                            <constraint firstItem="zZg-9u-C9Y" firstAttribute="centerX" secondItem="LAw-s5-idB" secondAttribute="centerX" id="WLU-tb-N5g"/>
+                            <constraint firstItem="chI-mr-OAf" firstAttribute="centerX" secondItem="LAw-s5-idB" secondAttribute="centerX" id="Yom-g2-YFp"/>
+                            <constraint firstItem="f3F-nX-Ab4" firstAttribute="top" secondItem="chI-mr-OAf" secondAttribute="bottom" constant="20" id="Z62-Ld-exO"/>
+                            <constraint firstItem="bhS-j2-MuN" firstAttribute="centerX" secondItem="LAw-s5-idB" secondAttribute="centerX" id="ZVm-aG-0mn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sG1-4T-0An"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REe-tX-fa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="-127"/>
+            <point key="canvasLocation" x="688" y="-372"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Jo3-UU-M24">
+            <objects>
+                <viewController id="fGe-Pf-RG6" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RDQ-Qx-ngK"/>
+                        <viewControllerLayoutGuide type="bottom" id="3wu-4Z-lfz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DwF-u9-MRW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vC2-ox-uOH">
+                                <rect key="frame" x="137" y="92" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickAction:" destination="fGe-Pf-RG6" eventType="touchUpInside" id="xIH-l4-Drq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vC2-ox-uOH" firstAttribute="centerX" secondItem="DwF-u9-MRW" secondAttribute="centerX" id="HlQ-HI-a2E"/>
+                            <constraint firstItem="vC2-ox-uOH" firstAttribute="top" secondItem="RDQ-Qx-ngK" secondAttribute="bottom" constant="72" id="v3y-Dq-sZm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2KO-oH-euT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-372"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qeu-NB-hP9">
@@ -237,4 +346,7 @@
             <point key="canvasLocation" x="-130" y="225"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZfX-cR-6es"/>
+    </inferredMetricsTieBreakers>
 </document>

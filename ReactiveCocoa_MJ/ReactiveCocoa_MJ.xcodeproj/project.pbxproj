@@ -105,6 +105,8 @@
 		9ECACA531BC76419002FBD53 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAC9F51BC76419002FBD53 /* UITableViewHeaderFooterView+RACSignalSupport.m */; settings = {ASSET_TAGS = (); }; };
 		9ECACA541BC76419002FBD53 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAC9F71BC76419002FBD53 /* UITextField+RACSignalSupport.m */; settings = {ASSET_TAGS = (); }; };
 		9ECACA551BC76419002FBD53 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAC9F91BC76419002FBD53 /* UITextView+RACSignalSupport.m */; settings = {ASSET_TAGS = (); }; };
+		9ECACA591BC7951C002FBD53 /* RACSignalSimpleUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9ECACA5C1BC79EEB002FBD53 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -312,6 +314,10 @@
 		9ECAC9F81BC76419002FBD53 /* UITextView+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+RACSignalSupport.h"; sourceTree = "<group>"; };
 		9ECAC9F91BC76419002FBD53 /* UITextView+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		9ECACA561BC76487002FBD53 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9ECACA571BC7951C002FBD53 /* RACSignalSimpleUseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalSimpleUseViewController.h; sourceTree = "<group>"; };
+		9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalSimpleUseViewController.m; sourceTree = "<group>"; };
+		9ECACA5A1BC79EEB002FBD53 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +355,10 @@
 				9ECAC9251BC76281002FBD53 /* AppDelegate.m */,
 				9ECAC9271BC76281002FBD53 /* ViewController.h */,
 				9ECAC9281BC76281002FBD53 /* ViewController.m */,
+				9ECACA571BC7951C002FBD53 /* RACSignalSimpleUseViewController.h */,
+				9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */,
+				9ECACA5A1BC79EEB002FBD53 /* SecondViewController.h */,
+				9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */,
 				9ECAC92A1BC76281002FBD53 /* Main.storyboard */,
 				9ECAC92D1BC76281002FBD53 /* Assets.xcassets */,
 				9ECAC92F1BC76281002FBD53 /* LaunchScreen.storyboard */,
@@ -686,6 +696,7 @@
 				9ECACA3E1BC76419002FBD53 /* RACTuple.m in Sources */,
 				9ECACA4C1BC76419002FBD53 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				9ECACA411BC76419002FBD53 /* RACUnit.m in Sources */,
+				9ECACA5C1BC79EEB002FBD53 /* SecondViewController.m in Sources */,
 				9ECACA381BC76419002FBD53 /* RACSubject.m in Sources */,
 				9ECACA191BC76419002FBD53 /* RACDisposable.m in Sources */,
 				9ECACA401BC76419002FBD53 /* RACUnarySequence.m in Sources */,
@@ -704,6 +715,7 @@
 				9ECACA3B1BC76419002FBD53 /* RACSubscriptionScheduler.m in Sources */,
 				9ECACA361BC76419002FBD53 /* RACStream.m in Sources */,
 				9ECACA141BC76419002FBD53 /* RACChannel.m in Sources */,
+				9ECACA591BC7951C002FBD53 /* RACSignalSimpleUseViewController.m in Sources */,
 				9ECACA511BC76419002FBD53 /* UISwitch+RACSignalSupport.m in Sources */,
 				9ECACA521BC76419002FBD53 /* UITableViewCell+RACSignalSupport.m in Sources */,
 				9ECACA001BC76419002FBD53 /* NSFileHandle+RACSupport.m in Sources */,
@@ -884,6 +896,7 @@
 				9ECAC9371BC76281002FBD53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
