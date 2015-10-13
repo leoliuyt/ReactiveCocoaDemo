@@ -107,6 +107,9 @@
 		9ECACA551BC76419002FBD53 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAC9F91BC76419002FBD53 /* UITextView+RACSignalSupport.m */; settings = {ASSET_TAGS = (); }; };
 		9ECACA591BC7951C002FBD53 /* RACSignalSimpleUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9ECACA5C1BC79EEB002FBD53 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9EF8BB211BCB66130055FE2C /* CommonUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8BB201BCB66130055FE2C /* CommonUsageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9EF8BB241BCB66910055FE2C /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8BB231BCB66910055FE2C /* RedView.m */; settings = {ASSET_TAGS = (); }; };
+		9EF8BB271BCBB1B70055FE2C /* AdvanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8BB261BCBB1B70055FE2C /* AdvanceViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -318,6 +321,12 @@
 		9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalSimpleUseViewController.m; sourceTree = "<group>"; };
 		9ECACA5A1BC79EEB002FBD53 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		9EF8BB1F1BCB66130055FE2C /* CommonUsageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUsageViewController.h; sourceTree = "<group>"; };
+		9EF8BB201BCB66130055FE2C /* CommonUsageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUsageViewController.m; sourceTree = "<group>"; };
+		9EF8BB221BCB66910055FE2C /* RedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedView.h; sourceTree = "<group>"; };
+		9EF8BB231BCB66910055FE2C /* RedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedView.m; sourceTree = "<group>"; };
+		9EF8BB251BCBB1B70055FE2C /* AdvanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceViewController.h; sourceTree = "<group>"; };
+		9EF8BB261BCBB1B70055FE2C /* AdvanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,8 +366,14 @@
 				9ECAC9281BC76281002FBD53 /* ViewController.m */,
 				9ECACA571BC7951C002FBD53 /* RACSignalSimpleUseViewController.h */,
 				9ECACA581BC7951C002FBD53 /* RACSignalSimpleUseViewController.m */,
+				9EF8BB1F1BCB66130055FE2C /* CommonUsageViewController.h */,
+				9EF8BB201BCB66130055FE2C /* CommonUsageViewController.m */,
 				9ECACA5A1BC79EEB002FBD53 /* SecondViewController.h */,
 				9ECACA5B1BC79EEB002FBD53 /* SecondViewController.m */,
+				9EF8BB251BCBB1B70055FE2C /* AdvanceViewController.h */,
+				9EF8BB261BCBB1B70055FE2C /* AdvanceViewController.m */,
+				9EF8BB221BCB66910055FE2C /* RedView.h */,
+				9EF8BB231BCB66910055FE2C /* RedView.m */,
 				9ECAC92A1BC76281002FBD53 /* Main.storyboard */,
 				9ECAC92D1BC76281002FBD53 /* Assets.xcassets */,
 				9ECAC92F1BC76281002FBD53 /* LaunchScreen.storyboard */,
@@ -686,6 +701,7 @@
 				9ECACA3D1BC76419002FBD53 /* RACTestScheduler.m in Sources */,
 				9ECACA3C1BC76419002FBD53 /* RACTargetQueueScheduler.m in Sources */,
 				9ECAC9FA1BC76419002FBD53 /* EXTRuntimeExtensions.m in Sources */,
+				9EF8BB211BCB66130055FE2C /* CommonUsageViewController.m in Sources */,
 				9ECAC9FC1BC76419002FBD53 /* NSArray+RACSequenceAdditions.m in Sources */,
 				9ECACA541BC76419002FBD53 /* UITextField+RACSignalSupport.m in Sources */,
 				9ECACA551BC76419002FBD53 /* UITextView+RACSignalSupport.m in Sources */,
@@ -705,6 +721,7 @@
 				9ECACA4B1BC76419002FBD53 /* UIGestureRecognizer+RACSignalSupport.m in Sources */,
 				9ECACA461BC76419002FBD53 /* UIButton+RACCommandSupport.m in Sources */,
 				9ECAC9231BC76281002FBD53 /* main.m in Sources */,
+				9EF8BB271BCBB1B70055FE2C /* AdvanceViewController.m in Sources */,
 				9ECACA161BC76419002FBD53 /* RACCompoundDisposable.m in Sources */,
 				9ECACA131BC76419002FBD53 /* RACBlockTrampoline.m in Sources */,
 				9ECACA2F1BC76419002FBD53 /* RACScopedDisposable.m in Sources */,
@@ -726,6 +743,7 @@
 				9ECACA201BC76419002FBD53 /* RACErrorSignal.m in Sources */,
 				9ECACA0C1BC76419002FBD53 /* NSString+RACKeyPathUtilities.m in Sources */,
 				9ECACA0A1BC76419002FBD53 /* NSOrderedSet+RACSequenceAdditions.m in Sources */,
+				9EF8BB241BCB66910055FE2C /* RedView.m in Sources */,
 				9ECACA151BC76419002FBD53 /* RACCommand.m in Sources */,
 				9ECACA311BC76419002FBD53 /* RACSerialDisposable.m in Sources */,
 				9ECACA281BC76419002FBD53 /* RACMulticastConnection.m in Sources */,

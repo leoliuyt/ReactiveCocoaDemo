@@ -11,6 +11,8 @@
 
 @interface RACSignalSimpleUseViewController ()
 
+@property (nonatomic, strong) RACCommand *command;
+
 @end
 
 @implementation RACSignalSimpleUseViewController
@@ -65,26 +67,26 @@
     // 1.调用subscribeNext订阅信号，只是把订阅者保存起来，并且订阅者的nextBlock已经赋值了。
     // 2.调用sendNext发送信号，遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
     
-    // 1.创建信号
-    RACSubject *subject = [RACSubject subject];
-    
-    // 2.订阅信号
-    [subject subscribeNext:^(id x) {
-        //block 调用时刻：当信号发出新值，就会调用。
-        NSLog(@"第一个订阅者%@",x);
-    }];
-    
-    [subject subscribeNext:^(id x) {
-        //block 调用时刻：当信号发出新值，就会调用。
-        NSLog(@"第二个订阅者%@",x);
-    }];
-    
-    // 3.发送信号
-    [subject sendNext:@"1"];
+//    // 1.创建信号
+//    RACSubject *subject = [RACSubject subject];
+//    
+//    // 2.订阅信号
+//    [subject subscribeNext:^(id x) {
+//        //block 调用时刻：当信号发出新值，就会调用。
+//        NSLog(@"第一个订阅者%@",x);
+//    }];
+//    
+//    [subject subscribeNext:^(id x) {
+//        //block 调用时刻：当信号发出新值，就会调用。
+//        NSLog(@"第二个订阅者%@",x);
+//    }];
+//    
+//    // 3.发送信号
+//    [subject sendNext:@"1"];
     
     
     // RACReplaySubject使用步骤:
-    // 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
+    // 1.创建信号 [RACReplaySubject subject]，跟RACSiganl不一样，创建信号时没有block。
     // 2.可以先订阅信号，也可以先发送信号。
     // 2.1 订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
     // 2.2 发送信号 sendNext:(id)value
@@ -159,6 +161,119 @@
     
     
     // 1.创建命令
+    RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"执行命令 传入值%@",input);
+        
+        // 创建空信号，必须返回信号
+        // 2.创建信号用来传递数据
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"开始请求"];
+            // 注意：数据传递完，最好调用sendCompleted，这时命令才执行完毕。
+            [subscriber sendCompleted];
+//            return [RACDisposable disposableWithBlock:^{
+//                NSLog(@"销毁");
+//            }];
+            return nil;
+        }];
+    }];
+    
+    //强引用command 防止被销毁 否则接受不到信号
+    self.command = command;
+//    [[self.command execute:@2] subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    // 3.订阅command中的信号
+    [command.executionSignals subscribeNext:^(id x) {
+        [x subscribeNext:^(id x) {
+            NSLog(@"%@",x);
+        }];
+    }];
+    
+    //RAC高级用法
+    //switchToLatest：用于signal of signals 获取signal of signals发出的最新信号，也就是可以直接拿到RACCommand中的信号
+    [command.executionSignals.switchToLatest subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    
+    // 4.执行命令
+    [self.command execute:@1];
+//    [[self.command execute:@1] subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    // 5.监听命令是否执行完毕，默认回来一次，可以直接跳过，skip表示跳过第一次信号
+    [[command.executing skip:1] subscribeNext:^(id x) {
+        if ([x boolValue] == YES) {
+            NSLog(@"正在执行");
+        }else
+        {
+            NSLog(@"执行完毕");
+        }
+    }];
+}
+- (IBAction)muticastConnectAction:(id)sender {
+    // RACMulticastConnection使用步骤:
+    // 1.创建信号 + (RACSignal *)createSignal:(RACDisposable * (^)(id<RACSubscriber> subscriber))didSubscribe
+    // 2.创建连接 RACMulticastConnection *connect = [signal publish];
+    // 3.订阅信号,注意：订阅的不在是之前的信号，而是连接的信号。 [connect.signal subscribeNext:nextBlock]
+    // 4.连接 [connect connect]
+    
+    // RACMulticastConnection底层原理:
+    // 1.创建connect，connect.sourceSignal -> RACSignal(原始信号)  connect.signal -> RACSubject
+    // 2.订阅connect.signal，会调用RACSubject的subscribeNext，创建订阅者，而且把订阅者保存起来，不会执行block。
+    // 3.[connect connect]内部会订阅RACSignal(原始信号)，并且订阅者是RACSubject
+    // 3.1.订阅原始信号，就会调用原始信号中的didSubscribe
+    // 3.2 didSubscribe，拿到订阅者调用sendNext，其实是调用RACSubject的sendNext
+    // 4.RACSubject的sendNext,会遍历RACSubject所有订阅者发送信号。
+    // 4.1 因为刚刚第二步，都是在订阅RACSubject，因此会拿到第二步所有的订阅者，调用他们的nextBlock
+    
+    
+    // 需求：假设在一个信号中发送请求，每次订阅一次都会发送请求，这样就会导致多次请求。
+    // 解决：使用RACMulticastConnection就能解决.
+    
+//    // 1.创建请求信号
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        NSLog(@"--发送信号");
+//        [subscriber sendNext:@"发送信号"];
+//        [subscriber sendCompleted];
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"销毁");
+//        }];
+//    }];
+//    
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"订阅信号1--%@",x);
+//    }];
+//    
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"订阅信号2--%@",x);
+//    }];
+    
+    
+    
+    // 1.创建请求信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"--发送信号");
+        [subscriber sendNext:@"发送信号"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"销毁");
+        }];
+    }];
+    
+    RACMulticastConnection *connect = [signal publish];
+    
+    [connect.signal subscribeNext:^(id x) {
+        NSLog(@"订阅信号1--%@",x);
+    }];
+    
+    [connect.signal subscribeNext:^(id x) {
+        NSLog(@"订阅信号2--%@",x);
+    }];
+    
+    [connect connect];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
