@@ -520,7 +520,7 @@
     RACSubject *signal = [RACSubject subject];
     
     // 2、处理信号，订阅信号
-    [[signal take:1] subscribeNext:^(id x) {
+    [[signal take:3] subscribeNext:^(id x) {
         
         NSLog(@"%@",x);
     }];
@@ -529,6 +529,8 @@
     [signal sendNext:@1];
     
     [signal sendNext:@2];
+    
+    //结果1,2
 }
 
 - (void)demo15
@@ -551,18 +553,22 @@
     [signal sendCompleted];
 }
 
+//????
 - (void)demo16
 {
     //takeUntil:(RACSignal *):获取信号直到执行完这个信号
     // 监听文本框的改变，知道当前对象被销毁
-    [_textField.rac_textSignal takeUntil:self.rac_willDeallocSignal];
+    [[_textField.rac_textSignal takeUntil:self.rac_willDeallocSignal]subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 }
 
+//???
 - (void)demo17
 {
     //skip:(NSUInteger):跳过几个信号,不接受。
     // 表示输入第一次，不会被监听到，跳过第一次发出的信号
-    [[_textField.rac_textSignal skip:1] subscribeNext:^(id x) {
+    [[_textField.rac_textSignal skip:2] subscribeNext:^(id x) {
         
         NSLog(@"%@",x);
     }];
@@ -631,7 +637,6 @@
 {
     //interval 定时：每隔一段时间发出信号
     [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] subscribeNext:^(id x) {
-        
         NSLog(@"%@",x);
     }];
 }
